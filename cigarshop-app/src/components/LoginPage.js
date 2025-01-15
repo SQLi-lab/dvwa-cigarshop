@@ -23,6 +23,7 @@ function LoginPage({ setLoggedIn }) {
 
             console.log(response.data.message); // Успешный вход
             setLoggedIn(true); // Устанавливаем статус входа
+            localStorage.setItem('loggedIn', 'true'); // Сохраняем статус входа
             navigate('/'); // Возвращаемся на главную страницу
         } catch (error) {
             if (error.response) {
@@ -44,12 +45,12 @@ function LoginPage({ setLoggedIn }) {
                 textAlign: 'center',
                 maxWidth: '400px',
                 padding: '20px',
-                backgroundColor: '#eafbea',
+                backgroundColor: '#f5f5dc',
                 borderRadius: '10px',
                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
             }}
         >
-            <Typography variant="h4" style={{ marginBottom: '20px', color: '#369f26' }}>
+            <Typography variant="h4" style={{ marginBottom: '20px', color: '#8B4513' }}>
                 Авторизация
             </Typography>
             {error && (
@@ -67,20 +68,20 @@ function LoginPage({ setLoggedIn }) {
                 sx={{
                     '& .MuiOutlinedInput-root': {
                         '& fieldset': {
-                            borderColor: '#369f26',
+                            borderColor: '#8B4513',
                         },
                         '&:hover fieldset': {
-                            borderColor: '#2d8e22',
+                            borderColor: '#6B3A0A',
                         },
                         '&.Mui-focused fieldset': {
-                            borderColor: '#369f26',
+                            borderColor: '#8B4513',
                         },
                     },
                     '& .MuiInputLabel-root': {
-                        color: '#369f26',
+                        color: '#8B4513',
                     },
                     '& .MuiInputLabel-root.Mui-focused': {
-                        color: '#369f26',
+                        color: '#8B4513',
                     },
                 }}
             />
@@ -95,27 +96,27 @@ function LoginPage({ setLoggedIn }) {
                 sx={{
                     '& .MuiOutlinedInput-root': {
                         '& fieldset': {
-                            borderColor: '#369f26',
+                            borderColor: '#8B4513',
                         },
                         '&:hover fieldset': {
-                            borderColor: '#2d8e22',
+                            borderColor: '#6B3A0A',
                         },
                         '&.Mui-focused fieldset': {
-                            borderColor: '#369f26',
+                            borderColor: '#8B4513',
                         },
                     },
                     '& .MuiInputLabel-root': {
-                        color: '#369f26',
+                        color: '#8B4513',
                     },
                     '& .MuiInputLabel-root.Mui-focused': {
-                        color: '#369f26',
+                        color: '#8B4513',
                     },
                 }}
             />
             <Button
                 variant="contained"
                 style={{
-                    backgroundColor: '#369f26',
+                    backgroundColor: '#8B4513',
                     color: '#fff',
                     padding: '10px 20px',
                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
