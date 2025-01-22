@@ -83,7 +83,7 @@ def get_products():
             c.country_of_origin, 
             c.released
         FROM cigars c
-        WHERE c.released = 1
+        WHERE c.released = true
     """
     if category:
         query += f" AND c.category = '{category}'"
